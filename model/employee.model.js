@@ -17,7 +17,7 @@ const employeeSchema = new mongoose.Schema ({
         lowercase : true,
         validate: {
             validator: function (value) {
-              return !value || /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net)$/.test(value);
+              return !value || /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|in)$/.test(value);
             },
             message: 'Email must be a valid format and end with .com or .net',
           },
